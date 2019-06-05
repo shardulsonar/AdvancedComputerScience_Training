@@ -1,0 +1,60 @@
+﻿<Window x:Class="ACS_Training.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ACS_Training"
+        mc:Ignorable="d"
+        Title="Advanced Computer Science Training" Height="550" Width="850">
+    <Window.Resources>
+        <Storyboard x:Key="MenuLoaded">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="160"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuAway">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="160"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="stackPanel">
+            <BeginStoryboard x:Name="MenuAway_BeginStoryboard" Storyboard="{StaticResource MenuAway}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="stackPanel">
+            <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="Topic Title" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="215,0,0,0" Grid.Row="2" Text="Sub TopicTitle" FontSize="15"/>
+        
+        <ListBox HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Margin="40,0,0,0" Grid.Row="3"/>
+        <ListBox HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="215,0,0,0" Grid.Row="3"/>
+        
+        <Grid HorizontalAlignment="Left" x:Name="stackPanel" Margin="-160,0,0,0" Grid.Row="3" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  VerticalAlignment="Top" Height="420">
+            <Button Content="☰" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Azure" Margin="0,5,5,0" FontSize="20" BorderThickness="0"/>
+            <ListBox Margin="10,35,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"/>
+            <Button Content="Quiz" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Width="50" Click="Button_Quiz_Click"/>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+        </Grid>
+    </Grid>
+</Window>
