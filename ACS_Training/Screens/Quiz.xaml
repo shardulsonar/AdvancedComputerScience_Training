@@ -11,14 +11,5 @@
         Closing="Quiz_Window_Closing"
         >
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="62,92,0,0" TextWrapping="Wrap" Text="Topic" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tbx_Topic" HorizontalAlignment="Left" Height="25" Margin="62,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="109"/>
-        <TextBlock HorizontalAlignment="Left" Margin="270,92,0,0" TextWrapping="Wrap" Text="SubTopic" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tbx_SubTopic" HorizontalAlignment="Left" Height="25" Margin="270,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="109"/>
-        <TextBlock HorizontalAlignment="Left" Margin="636,92,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tbx_Points" HorizontalAlignment="Left" Height="105" Margin="554,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" AcceptsReturn="True" Width="191"/>
-        <Button x:Name="Btn_Add" Content="Add" HorizontalAlignment="Left" Margin="382,356,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Add_Click"/>
-
-
     </Grid>
 </Window>
