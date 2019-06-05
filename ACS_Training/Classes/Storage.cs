@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Windows;
 
 namespace ACS_Training.Classes
 {
@@ -13,16 +14,32 @@ namespace ACS_Training.Classes
 
             try
             {
-                
                 FileStream stream = new FileStream(fileName, FileMode.Create);
-                string a = JsonConvert.SerializeObject(data);
-                byte[] info = new UTF8Encoding(true).GetBytes(a);
-                stream.Write(info, 0, info.Length);
+                string dataAsString = JsonConvert.SerializeObject(data);
+                byte[] dataAsBytes = new UTF8Encoding(true).GetBytes(dataAsString);
+                stream.Write(dataAsBytes, 0, dataAsBytes.Length);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 throw;
+            }
+        }
+
+        internal static T ReadJson<T>(string fileName)
+        {
+            try
+            {
+                using (StreamReader streamReader = new StreamReader(fileName))
+                {
+                    string data = streamReader.ReadToEnd();
+                    return (T)JsonConvert.DeserializeObject<T>(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex, "Caution . . ");
+                return (T)default;
             }
         }
     }

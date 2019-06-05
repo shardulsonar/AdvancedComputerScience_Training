@@ -30,13 +30,15 @@ namespace ACS_Training.Screens
 
         private void Quiz_Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            topics = new List<Topic>();
+            topics = Storage.ReadJson<List<Topic>>("content.json");
+            Console.WriteLine(topics);
         }
 
         private void Quiz_Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Owner.Visibility = Visibility.Visible;
-            Storage.WriteJson<List<Topic>>(topics, "data.json");
+            //Storage.WriteJson<List<Topic>>(topics, "data.json");
         }
 
         private void Btn_Add_Click(object sender, RoutedEventArgs e)
