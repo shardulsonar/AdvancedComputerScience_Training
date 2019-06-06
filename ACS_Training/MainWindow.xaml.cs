@@ -1,4 +1,5 @@
-﻿using ACS_Training.Screens;
+﻿using ACS_Training.Classes;
+using ACS_Training.Screens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace ACS_Training
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        List<Topic> topics;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +34,31 @@ namespace ACS_Training
             quizWindow.Owner = this;
             quizWindow.Show();
             Visibility = Visibility.Hidden;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            topics = Storage.ReadJson<List<Topic>>("content.json");
+            Lbx_topics.ItemsSource = topics;
+            Lbx_topics.SelectedIndex = 0;
+        }
+
+        private void Lbx_topics_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Tbx_topic.Text = ((Topic)Lbx_topics.SelectedItem).name.ToString();
+            
+            Lbx_subTopics.ItemsSource = (List<SubTopic>)((Topic)Lbx_topics.SelectedItem).subTopics;
+            Lbx_subTopics.SelectedIndex = 0;
+        }
+
+        private void Lbx_subTopics_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Lbx_subTopics.SelectedItem == null)
+            {
+                return;
+            }
+            Tbx_subTopic.Text = ((SubTopic)Lbx_subTopics.SelectedItem).name.ToString();
+            Lbx_points.ItemsSource = (List<string>)((SubTopic)Lbx_subTopics.SelectedItem).points;
         }
     }
 }

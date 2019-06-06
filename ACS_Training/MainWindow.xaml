@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACS_Training"
         mc:Ignorable="d"
-        Title="Advanced Computer Science Training" Height="550" Width="850">
+        Loaded="Window_Loaded"
+        Title="Advanced Computer Science Training" Height="500" Width="850">
     <Window.Resources>
         <Storyboard x:Key="MenuLoaded">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="menuGrid">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="160"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MenuAway">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="menuGrid">
                 <EasingDoubleKeyFrame KeyTime="0" Value="160"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
@@ -22,10 +23,10 @@
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="stackPanel">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="menuGrid">
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard" Storyboard="{StaticResource MenuAway}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="stackPanel">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="menuGrid">
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
         </EventTrigger>
     </Window.Triggers>
@@ -37,16 +38,53 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="Topic Title" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="215,0,0,0" Grid.Row="2" Text="Sub TopicTitle" FontSize="15"/>
+        <TextBlock x:Name="Tbx_topic" HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="Topic Title" FontSize="20"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="215"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Tbx_subTopic" HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="0,0,0,0" Grid.Column="1" Text="Sub TopicTitle" FontSize="15"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="175"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="Lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="Lbx_subTopics_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding name}" Height="60" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <ListBox x:Name="Lbx_points" HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
         
-        <ListBox HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Margin="40,0,0,0" Grid.Row="3"/>
-        <ListBox HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="215,0,0,0" Grid.Row="3"/>
-        
-        <Grid HorizontalAlignment="Left" x:Name="stackPanel" Margin="-160,0,0,0" Grid.Row="3" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  VerticalAlignment="Top" Height="420">
-            <Button Content="☰" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Azure" Margin="0,5,5,0" FontSize="20" BorderThickness="0"/>
-            <ListBox Margin="10,35,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"/>
-            <Button Content="Quiz" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Width="50" Click="Button_Quiz_Click"/>
+        <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Row="3" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  VerticalAlignment="Top" Height="370">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Button Content="☰" HorizontalAlignment="Right" Background="Azure" Margin="0,5,5,0" FontSize="20" BorderThickness="0" Grid.Row="0"/>
+            <ListBox x:Name="Lbx_topics" Grid.Row="1" Margin="10,10,0,10"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding name}" Height="45"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Quiz" HorizontalAlignment="Left" Margin="60,0,0,15" Width="50" Grid.Row="2" Click="Button_Quiz_Click"/>
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

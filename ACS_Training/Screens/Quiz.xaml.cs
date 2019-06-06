@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace ACS_Training.Screens
 {
     /// <summary>
-    /// Interaction logic for Quiz.xaml
+    /// Interaction logic for Quiz.xaml 
     /// </summary>
     public partial class Quiz : Window
     {
@@ -25,7 +25,6 @@ namespace ACS_Training.Screens
         public Quiz()
         {
             InitializeComponent();
-            topics = new List<Topic>();
         }
 
         private void Quiz_Window_Loaded(object sender, RoutedEventArgs e)

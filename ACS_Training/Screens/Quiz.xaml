@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACS_Training.Screens"
         mc:Ignorable="d"
-        Title="Quiz" Height="550" Width="850"
+        Title="Quiz" Height="500" Width="850"
         Loaded="Quiz_Window_Loaded"
         WindowStartupLocation="CenterOwner"
         Closing="Quiz_Window_Closing"
