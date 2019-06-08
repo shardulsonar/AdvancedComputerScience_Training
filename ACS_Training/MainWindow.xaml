@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ACS_Training"
+        xmlns:local="clr-namespace:ACS_Training.Classes"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         Title="Advanced Computer Science Training" Height="500" Width="850">
+    
     <Window.Resources>
+        <local:StringToImageSourceConverter x:Key="StringToImage" />
         <Storyboard x:Key="MenuLoaded">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="menuGrid">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
@@ -30,7 +32,7 @@
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid>
+    <Grid x:Name="Grid_OuterGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
@@ -38,7 +40,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
-        <TextBlock x:Name="Tbx_topic" HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="Topic Title" FontSize="20"/>
+        <TextBlock x:Name="Tbx_topic" HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="215"/>
@@ -51,6 +53,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="175"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ListBox x:Name="Lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="Lbx_subTopics_SelectionChanged">
@@ -67,6 +70,10 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <Viewbox Grid.Column="3" Margin="0,0,0,30">
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform"
+                   Source="{Binding imageLocation, Converter={StaticResource StringToImage}}"/>
+            </Viewbox>
         </Grid>
 
         

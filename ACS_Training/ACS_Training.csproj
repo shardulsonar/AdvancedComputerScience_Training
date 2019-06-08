@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\StringToImageSourceConverter.cs" />
     <Compile Include="Classes\SubTopic.cs" />
     <Compile Include="Classes\Topic.cs" />
     <Compile Include="Screens\Quiz.xaml.cs">
@@ -111,6 +112,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1.1.jpg" />
+    <Resource Include="Images\1.2.JPG" />
+    <Resource Include="Images\2.1.jpg" />
+    <Resource Include="Images\2.2.jpg" />
+    <Resource Include="Images\2.3.jpg" />
+    <Resource Include="Images\3.4.JPG" />
+    <Resource Include="Images\4.1.jpg" />
+    <Resource Include="Images\4.2.jpg" />
+    <Resource Include="Images\4.3.jpg" />
+    <Resource Include="Images\4.4.jpg" />
+    <Resource Include="Images\4.5.jpg" />
+    <Resource Include="Images\5.1.jpg" />
+    <Resource Include="Images\5.2.jpg" />
+    <Resource Include="Images\5.3.jpg" />
+    <Resource Include="Images\3.3.jpg" />
+    <Resource Include="Images\3.2.jpg" />
+    <Resource Include="Images\3.1.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
