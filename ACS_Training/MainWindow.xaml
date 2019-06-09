@@ -32,7 +32,7 @@
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid x:Name="Grid_OuterGrid" >
+    <Grid x:Name="grid_OuterGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
@@ -46,7 +46,7 @@
                 <ColumnDefinition Width="215"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="Tbx_subTopic" HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="0,0,0,0" Grid.Column="1" Text="Sub TopicTitle" FontSize="15"/>
+            <TextBlock  HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="0,0,0,0" Grid.Column="1" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" Text="{ Binding name}" FontSize="15"/>
         </Grid>
 
         <Grid Grid.Row="3">
@@ -56,21 +56,21 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="Lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}" SelectionChanged="Lbx_subTopics_SelectionChanged">
+            <ListBox x:Name="lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding name}" Height="60" TextWrapping="Wrap"></TextBlock>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <ListBox x:Name="Lbx_points" HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding}" TextWrapping="Wrap"></TextBlock>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Viewbox Grid.Column="3" Margin="0,0,0,30" DataContext="{Binding SelectedItem, ElementName=Lbx_subTopics}">
+            <Viewbox Grid.Column="3" Margin="0,0,0,30" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="5,0,5,0"
                    Source="{Binding imageLocation, Converter={StaticResource StringToImage}}"/>
             </Viewbox>
@@ -81,17 +81,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Button Content="☰" HorizontalAlignment="Right" Background="Azure" Margin="0,5,5,0" FontSize="20" BorderThickness="0" Grid.Row="0"/>
-            <ListBox x:Name="Lbx_topics" Grid.Row="1" Margin="10,10,0,10"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
+            <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,10,0,0"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding name}" Height="45"></TextBlock>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button Content="Quiz" HorizontalAlignment="Left" Margin="60,0,0,15" Width="50" Grid.Row="2" Click="Button_Quiz_Click"/>
+            <Button Content="Quiz" HorizontalAlignment="Left" Margin="60,5,0,5" Width="50" Grid.Row="2" Click="Button_Quiz_Click"/>
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
