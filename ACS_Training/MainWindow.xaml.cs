@@ -39,24 +39,25 @@ namespace ACS_Training
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             topics = Storage.ReadJson<List<Topic>>("content.json");
-            Lbx_topics.ItemsSource = topics;
-            Lbx_topics.SelectedIndex = 0;
+            lbx_topics.ItemsSource = topics;
+            lbx_topics.SelectedIndex = 0;
         }
 
         private void Lbx_topics_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Grid_OuterGrid.DataContext = (Topic)Lbx_topics.SelectedItem;
-            Lbx_subTopics.SelectedIndex = 0;
+            grid_OuterGrid.DataContext = topics;
+            grid_SubTopicGrid.DataContext = (Topic)lbx_topics.SelectedItem;
+            lbx_subTopics.SelectedIndex = 0;
         }
 
         private void Lbx_subTopics_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(Lbx_subTopics.SelectedItem == null)
+            if(lbx_subTopics.SelectedItem == null)
             {
                 return;
             }
-            Tbx_subTopic.Text = ((SubTopic)Lbx_subTopics.SelectedItem).name.ToString();
-            Lbx_points.ItemsSource = (List<string>)((SubTopic)Lbx_subTopics.SelectedItem).points;
+            tbx_subTopic.Text = ((SubTopic)lbx_subTopics.SelectedItem).name.ToString();
+            //tbx_points.ItemsSource = (List<string>)((SubTopic)lbx_subTopics.SelectedItem).points;
         }
     }
 }
