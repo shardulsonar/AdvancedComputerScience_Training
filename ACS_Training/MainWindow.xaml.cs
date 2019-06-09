@@ -46,7 +46,6 @@ namespace ACS_Training
         private void Lbx_topics_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Grid_OuterGrid.DataContext = (Topic)Lbx_topics.SelectedItem;
-            Lbx_subTopics.ItemsSource = (List<SubTopic>)((Topic)Lbx_topics.SelectedItem).subTopics;
             Lbx_subTopics.SelectedIndex = 0;
         }
 
