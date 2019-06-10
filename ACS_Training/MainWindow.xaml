@@ -36,70 +36,77 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20"/>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="215"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBlock  HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="0,0,0,0" Grid.Column="1" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" Text="{ Binding name}" FontSize="15"/>
-        </Grid>
-
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="175"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <ListBox x:Name="lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding name}" Height="60" TextWrapping="Wrap"></TextBlock>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}" >
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding}" TextWrapping="Wrap"></TextBlock>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <Viewbox Grid.Column="3" Margin="0,0,0,30" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}">
-                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="5,0,5,0"
-                   Source="{Binding imageLocation, Converter={StaticResource StringToImage}}"/>
-            </Viewbox>
-        </Grid>
-
         
-        <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Row="3" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  VerticalAlignment="Top" Height="370">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-            <Button Content="☰" HorizontalAlignment="Right" Background="Azure" Margin="0,5,5,0" FontSize="20" BorderThickness="0" Grid.Row="0"/>
-            <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,10,0,0"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding name}" Height="45"></TextBlock>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <Button Content="Quiz" HorizontalAlignment="Left" Margin="60,5,0,5" Width="50" Grid.Row="2" Click="Button_Quiz_Click"/>
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="170,0,0,0" Grid.Row="0" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" Text="{Binding name}" FontSize="15"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding name}" Height="60" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Viewbox Grid.Column="3" Margin="0,0,0,30" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}">
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="10,0,10,0"
+                   Source="{Binding imageLocation, Converter={StaticResource StringToImage}}"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+
+
+            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Button Content="☰" HorizontalAlignment="Right" Background="Azure" Margin="0,5,5,0"  BorderThickness="0" Grid.Row="0"/>
+                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding name}" Height="45"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button x:Name="btn_quiz" Content="Quiz" HorizontalAlignment="Left" Margin="60,0,0,5" Width="50" Grid.Row="1" Click="Button_Quiz_Click" VerticalAlignment="Bottom"/>
+            </Grid>
+
+
         </Grid>
     </Grid>
 </Window>

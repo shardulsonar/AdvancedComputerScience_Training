@@ -30,7 +30,7 @@ namespace ACS_Training
 
         private void Button_Quiz_Click(object sender, RoutedEventArgs e)
         {
-            var quizWindow = new Quiz();
+            var quizWindow = new Quiz((Topic)lbx_topics.SelectedItem);
             quizWindow.Owner = this;
             quizWindow.Show();
             Visibility = Visibility.Hidden;
@@ -40,13 +40,22 @@ namespace ACS_Training
         {
             topics = Storage.ReadJson<List<Topic>>("content.json");
             lbx_topics.ItemsSource = topics;
-            lbx_topics.SelectedIndex = 0;
+            lbx_topics.SelectedItem = topics.FirstOrDefault<Topic>();
         }
 
         private void Lbx_topics_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            grid_OuterGrid.DataContext = (Topic)lbx_topics.SelectedItem;
-            lbx_subTopics.SelectedItem = ((Topic)lbx_topics.SelectedItem).subTopics.FirstOrDefault<SubTopic>();
+            Topic selectedTopic = (Topic)lbx_topics.SelectedItem;
+            if(selectedTopic.subTopics.Count < 3)
+            {
+                btn_quiz.IsEnabled = false;
+            }
+            else
+            {
+                btn_quiz.IsEnabled = true;
+            }
+            grid_OuterGrid.DataContext = selectedTopic;
+            lbx_subTopics.SelectedItem = selectedTopic.subTopics.FirstOrDefault<SubTopic>();
         }
 
     }

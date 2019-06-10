@@ -20,17 +20,22 @@ namespace ACS_Training.Screens
     /// </summary>
     public partial class Quiz : Window
     {
-        List<Topic> topics;
+        Topic topic;
+        Question question;
+        Option selectedOption;
 
-        public Quiz()
+        public Quiz(Topic topic)
         {
             InitializeComponent();
+            this.topic = topic;
+            stk_title.DataContext = topic;
+            question = new Question(topic);
         }
 
         private void Quiz_Window_Loaded(object sender, RoutedEventArgs e)
         {
-            topics = new List<Topic>();
-            topics = Storage.ReadJson<List<Topic>>("content.json");
+            question = new Question(topic).getQuestion();
+            stk_question.DataContext = question;
         }
 
         private void Quiz_Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -38,5 +43,17 @@ namespace ACS_Training.Screens
             Owner.Visibility = Visibility.Visible;
         }
 
+        private void Check_Button_Click(object sender, RoutedEventArgs e)
+        {
+            selectedOption = (Option)lbx_options.SelectedItem;
+            if (selectedOption.status)
+            {
+                txb_optionStatus.Text = "Correct";
+            }
+            else
+            {
+                txb_optionStatus.Text = "Incorrect";
+            } 
+        }
     }
 }

@@ -62,6 +62,8 @@
     <Compile Include="Classes\StringToImageSourceConverter.cs" />
     <Compile Include="Classes\SubTopic.cs" />
     <Compile Include="Classes\Topic.cs" />
+    <Compile Include="Screens\Answer.cs" />
+    <Compile Include="Screens\Question.cs" />
     <Compile Include="Screens\Quiz.xaml.cs">
       <DependentUpon>Quiz.xaml</DependentUpon>
     </Compile>

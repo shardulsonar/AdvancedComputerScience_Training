@@ -5,11 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACS_Training.Screens"
         mc:Ignorable="d"
-        Title="Quiz" Height="500" Width="850"
+        Title="Quiz" Height="500" Width="400"
         Loaded="Quiz_Window_Loaded"
         WindowStartupLocation="CenterOwner"
         Closing="Quiz_Window_Closing"
         >
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="stk_title" Margin="0,0,0,0" Orientation="Horizontal" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Quiz Topic : " VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel x:Name="stk_question" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,0">
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="50,20,50,0"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="50,30,50,0" FontWeight="Bold"/>
+            <ListBox x:Name="lbx_options" Margin="50,20,50,0" ItemsSource="{Binding options}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding optionText}" FontSize="16" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock x:Name="txb_optionStatus" TextWrapping="Wrap" FontSize="16" Margin="50,100,50,0" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" FlowDirection="RightToLeft" Margin="0,0,10,10">
+            <Button Content="Next" Margin="0,0,10,0" Width="45"/>
+            <Button Content="Check"  Margin="0,0,10,0" Width="45" Click="Check_Button_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>
