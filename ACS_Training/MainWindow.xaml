@@ -41,7 +41,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20" FontWeight="DemiBold"/>
 
         <Grid Grid.Row="2">
 
@@ -55,31 +55,39 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="170,0,0,0" Grid.Row="0" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}"  TextWrapping="Wrap" Text="{Binding name}" FontSize="15"/>
+                <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="170,0,0,0" Grid.Row="0" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}"  TextWrapping="Wrap" Text="{Binding name}" FontSize="15" FontWeight="DemiBold"/>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="170"/>
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}">
+                    <ListBox x:Name="lbx_subTopics"  HorizontalAlignment="Left" Width="150" Margin="0,0,0,30" Grid.Column="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding subTopics}" BorderThickness="0" Background="Azure">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding name}" Height="60" TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding name}" Height="45" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Stretch"/>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}">
+                    <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}" BorderThickness="0" Background="Azure">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                                <Grid>
+                                    <TextBlock Text="•" />
+                                    <TextBlock Text="{Binding}" Margin="10,0,0,0" TextWrapping="Wrap" />
+                                </Grid>
+                                
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <Viewbox Grid.Column="3" Margin="0,0,0,30" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}">
-                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="10,0,10,0"
+                    <Grid Grid.Column="3" Margin="10,0,10,30" Background="White">
+                    <Viewbox Grid.Column="3"  DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}">
+                        
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="0,0,0,0"
                    Source="{Binding imageLocation, Converter={StaticResource StringToImage}}"/>
+                        
                     </Viewbox>
+                    </Grid>
                 </Grid>
             </Grid>
 
@@ -99,10 +107,10 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
                 <TextBlock Text="☰" HorizontalAlignment="Right" Margin="0,5,5,0"   Grid.Row="0" />
-                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged" Background="White"  >
+                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged" Background="#c0cccc"  BorderThickness="0"  >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding name}" Height="45"/>
+                            <TextBlock Text="{Binding name}" Height="45" FontWeight="Bold" VerticalAlignment="Center" Margin="0,5,0,5"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
