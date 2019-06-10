@@ -8,7 +8,7 @@
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
         Title="Advanced Computer Science Training" Height="500" Width="850">
-    
+
     <Window.Resources>
         <local:StringToImageSourceConverter x:Key="StringToImage" />
         <Storyboard x:Key="MenuLoaded">
@@ -33,15 +33,16 @@
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid x:Name="grid_OuterGrid" Background="Azure">
+    <Grid x:Name="grid_OuterGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="Advanced Computer Science Training" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20"/>
-        
+
         <Grid Grid.Row="2">
 
             <Grid.ColumnDefinitions>
@@ -68,7 +69,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}" >
+                    <ListBox HorizontalAlignment="Left" Width="200" Margin="0,0,0,30" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" ItemsSource="{Binding points}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
@@ -83,7 +84,8 @@
             </Grid>
 
 
-            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" Background="PaleTurquoise" RenderTransformOrigin="0.5,0.5" Width="190"  >
+            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" RenderTransformOrigin="0.5,0.5" Width="190" Background="#c0cccc">
+
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>
@@ -96,15 +98,15 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Grid.RenderTransform>
-                <Button Content="☰" HorizontalAlignment="Right" Background="Azure" Margin="0,5,5,0"  BorderThickness="0" Grid.Row="0"/>
-                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged">
+                <TextBlock Text="☰" HorizontalAlignment="Right" Margin="0,5,5,0"   Grid.Row="0" />
+                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged" Background="White"  >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding name}" Height="45"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btn_quiz" Content="Quiz" HorizontalAlignment="Left" Margin="60,0,0,5" Width="50" Grid.Row="1" Click="Button_Quiz_Click" VerticalAlignment="Bottom"/>
+                <Button x:Name="btn_quiz" Content="Quiz" HorizontalAlignment="Left" Margin="60,0,0,5" Width="50" Grid.Row="1" Click="Button_Quiz_Click" VerticalAlignment="Bottom" />
             </Grid>
 
 

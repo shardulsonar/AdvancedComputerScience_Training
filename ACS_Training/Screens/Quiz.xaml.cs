@@ -64,8 +64,9 @@ namespace ACS_Training.Screens
                     tbx_optionStatus.Foreground = new SolidColorBrush(Colors.Red);
                     tbx_correctAnswer.Text = "Correct answer is : " + question.correctAnswer;
                 }
+                btn_check.IsEnabled = false;
             }
-            btn_check.IsEnabled = false;
+            
 
         }
 

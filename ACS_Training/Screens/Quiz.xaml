@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         Closing="Quiz_Window_Closing"
         >
-    <Grid>
+    <Grid Background="Azure">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition></RowDefinition>
