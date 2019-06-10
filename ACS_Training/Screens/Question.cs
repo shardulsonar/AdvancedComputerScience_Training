@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ACS_Training.Classes;
 
 namespace ACS_Training.Screens
@@ -26,13 +27,18 @@ namespace ACS_Training.Screens
             Option correctOption = new Option() { optionText = correctAnswerSubTopic.name, status = true };
             options.Add(correctOption);
             this.questionText = correctAnswerSubTopic.points[random.Next(correctAnswerSubTopic.points.Count)];
+            List<SubTopic> copyOfSubTopicsList = new List<SubTopic>();
+            topic.subTopics.ForEach(subtopic => copyOfSubTopicsList.Add(subtopic));
+            copyOfSubTopicsList.Remove(correctAnswerSubTopic);
+            do
+            {
+                SubTopic incorrectOptionSubtopic = copyOfSubTopicsList[random.Next(copyOfSubTopicsList.Count)];
+                Option incorrectOption = new Option { optionText = incorrectOptionSubtopic.name, status = false };
+                options.Add(incorrectOption);
+                copyOfSubTopicsList.Remove(incorrectOptionSubtopic);
 
-            topic.subTopics.Remove(correctAnswerSubTopic);
-
-            Option incorrectOption = new Option { optionText = topic.subTopics[random.Next(topic.subTopics.Count)].name, status = false };
-            options.Add(incorrectOption);
-            this.options = options;
-
+            } while (options.Count < 3);
+            this.options = options.OrderBy(option => Guid.NewGuid()).ToList();
             this.questionDescription = "For the given statememt, \nPlease choose the subtopic it belongs to ";
             return this;
 

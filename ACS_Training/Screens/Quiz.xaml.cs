@@ -49,10 +49,12 @@ namespace ACS_Training.Screens
             if (selectedOption.status)
             {
                 txb_optionStatus.Text = "Correct";
+                txb_optionStatus.Foreground = new SolidColorBrush(Colors.Green);
             }
             else
             {
                 txb_optionStatus.Text = "Incorrect";
+                txb_optionStatus.Foreground = new SolidColorBrush(Colors.Red);
             } 
         }
     }

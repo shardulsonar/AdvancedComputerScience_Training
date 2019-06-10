@@ -29,7 +29,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock x:Name="txb_optionStatus" TextWrapping="Wrap" FontSize="16" Margin="50,100,50,0" FontWeight="Bold"/>
+            <TextBlock x:Name="txb_optionStatus" TextWrapping="Wrap" FontSize="16" Margin="50,50,50,0" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" FlowDirection="RightToLeft" Margin="0,0,10,10">
             <Button Content="Next" Margin="0,0,10,0" Width="45"/>
