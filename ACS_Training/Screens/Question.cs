@@ -17,6 +17,7 @@ namespace ACS_Training.Screens
         public string questionDescription { get; set; }
         public string questionText { get; set; }
         public List<Option> options { get; set; }
+        public string correctAnswer { get; set; }
 
         public Question getQuestion()
         {
@@ -24,6 +25,7 @@ namespace ACS_Training.Screens
             List<Option> options = new List<Option>();
 
             SubTopic correctAnswerSubTopic = topic.subTopics[random.Next(topic.subTopics.Count)];
+            this.correctAnswer = correctAnswerSubTopic.name;
             Option correctOption = new Option() { optionText = correctAnswerSubTopic.name, status = true };
             options.Add(correctOption);
             this.questionText = correctAnswerSubTopic.points[random.Next(correctAnswerSubTopic.points.Count)];

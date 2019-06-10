@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ACS_Training.Classes"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
         Title="Advanced Computer Science Training" Height="500" Width="850">
     
     <Window.Resources>
@@ -32,7 +33,7 @@
             <BeginStoryboard x:Name="MenuAway_BeginStoryboard1" Storyboard="{StaticResource MenuLoaded}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid x:Name="grid_OuterGrid" >
+    <Grid x:Name="grid_OuterGrid" Background="Azure">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
@@ -53,7 +54,7 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="170,0,0,0" Grid.Row="0" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}" Text="{Binding name}" FontSize="15"/>
+                <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="170,0,0,0" Grid.Row="0" DataContext="{Binding SelectedItem, ElementName=lbx_subTopics}"  TextWrapping="Wrap" Text="{Binding name}" FontSize="15"/>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="170"/>
@@ -82,7 +83,7 @@
             </Grid>
 
 
-            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" Background="Azure" RenderTransformOrigin="0.5,0.5" Width="190"  >
+            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" Background="PaleTurquoise" RenderTransformOrigin="0.5,0.5" Width="190"  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>

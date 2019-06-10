@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Quiz" Height="500" Width="400"
         Loaded="Quiz_Window_Loaded"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         Closing="Quiz_Window_Closing"
         >
     <Grid>
@@ -20,20 +20,21 @@
             <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel x:Name="stk_question" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,0">
-            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="50,20,50,0"/>
-            <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="50,30,50,0" FontWeight="Bold"/>
-            <ListBox x:Name="lbx_options" Margin="50,20,50,0" ItemsSource="{Binding options}">
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="30,20,50,0"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="30,30,30,0" FontWeight="Bold"/>
+            <ListBox x:Name="lbx_options" Margin="30,20,30,0" ItemsSource="{Binding options}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding optionText}" FontSize="16" TextWrapping="Wrap"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock x:Name="txb_optionStatus" TextWrapping="Wrap" FontSize="16" Margin="50,50,50,0" FontWeight="Bold"/>
+            <TextBlock x:Name="tbx_optionStatus" TextWrapping="Wrap" FontSize="16" Margin="30,20,30,0" FontWeight="Bold"/>
+            <TextBlock x:Name="tbx_correctAnswer" TextWrapping="Wrap" FontSize="12" Margin="30,10,30,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" FlowDirection="RightToLeft" Margin="0,0,10,10">
-            <Button Content="Next" Margin="0,0,10,0" Width="45"/>
-            <Button Content="Check"  Margin="0,0,10,0" Width="45" Click="Check_Button_Click"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" FlowDirection="RightToLeft" Margin="0,0,30,10">
+            <Button Content="Next" Margin="0,0,10,0" Width="45" Click="Next_Button_Click"/>
+            <Button x:Name="btn_check" Content="Check"  Margin="0,0,10,0" Width="45" Click="Check_Button_Click"/>
         </StackPanel>
 
     </Grid>

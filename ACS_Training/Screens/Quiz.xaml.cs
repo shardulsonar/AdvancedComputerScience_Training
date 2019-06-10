@@ -36,6 +36,7 @@ namespace ACS_Training.Screens
         {
             question = new Question(topic).getQuestion();
             stk_question.DataContext = question;
+            
         }
 
         private void Quiz_Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -45,17 +46,35 @@ namespace ACS_Training.Screens
 
         private void Check_Button_Click(object sender, RoutedEventArgs e)
         {
-            selectedOption = (Option)lbx_options.SelectedItem;
-            if (selectedOption.status)
+            if ((Option)lbx_options.SelectedItem == null)
             {
-                txb_optionStatus.Text = "Correct";
-                txb_optionStatus.Foreground = new SolidColorBrush(Colors.Green);
+                MessageBox.Show(Application.Current.MainWindow, "Please select an option", "Option not found", MessageBoxButton.OK,  MessageBoxImage.Error);
             }
             else
             {
-                txb_optionStatus.Text = "Incorrect";
-                txb_optionStatus.Foreground = new SolidColorBrush(Colors.Red);
-            } 
+                selectedOption = (Option)lbx_options.SelectedItem;
+                if (selectedOption.status)
+                {
+                    tbx_optionStatus.Text = "Correct";
+                    tbx_optionStatus.Foreground = new SolidColorBrush(Colors.Green);
+                }
+                else
+                {
+                    tbx_optionStatus.Text = "Incorrect";
+                    tbx_optionStatus.Foreground = new SolidColorBrush(Colors.Red);
+                    tbx_correctAnswer.Text = "Correct answer is : " + question.correctAnswer;
+                }
+            }
+            btn_check.IsEnabled = false;
+
+        }
+
+        private void Next_Button_Click(object sender, RoutedEventArgs e)
+        {
+            tbx_optionStatus.Text = "";
+            tbx_correctAnswer.Text = "";
+            btn_check.IsEnabled = true;
+            this.Quiz_Window_Loaded(sender, e);
         }
     }
 }
