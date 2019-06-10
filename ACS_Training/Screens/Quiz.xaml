@@ -20,8 +20,8 @@
             <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel x:Name="stk_question" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,0">
-            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="30,20,50,0"/>
-            <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="30,30,30,0" FontWeight="Bold"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="30,20,50,0" FontSize="14"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="30,20,30,0" FontWeight="Bold"/>
             <ListBox x:Name="lbx_options" Margin="30,20,30,0" ItemsSource="{Binding options}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
