@@ -92,7 +92,7 @@
             </Grid>
 
 
-            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" RenderTransformOrigin="0.5,0.5" Width="190" Background="#c0cccc">
+            <Grid HorizontalAlignment="Left" x:Name="menuGrid" Margin="-160,0,0,0" Grid.Column="0" RenderTransformOrigin="0.5,0.5" Width="190" Background="#d8e5e5">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
@@ -107,7 +107,7 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
                 <TextBlock Text="☰" HorizontalAlignment="Right" Margin="0,5,5,0"   Grid.Row="0" />
-                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged" Background="#c0cccc"  BorderThickness="0"  >
+                <ListBox x:Name="lbx_topics" Grid.Row="1" Margin="10,0,0,30"  HorizontalAlignment="Left" Width="150" SelectionChanged="Lbx_topics_SelectionChanged" Background="#d8e5e5"  BorderThickness="0"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding name}" Height="45" FontWeight="Bold" VerticalAlignment="Center" Margin="0,5,0,5"/>
