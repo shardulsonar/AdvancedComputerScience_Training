@@ -14,7 +14,6 @@ namespace ACS_Training.Screens
             this.topic = topic;
         }
 
-        public string questionDescription { get; set; }
         public string questionText { get; set; }
         public List<Option> options { get; set; }
         public string correctAnswer { get; set; }
@@ -41,7 +40,6 @@ namespace ACS_Training.Screens
 
             } while (options.Count < 3);
             this.options = options.OrderBy(option => Guid.NewGuid()).ToList();
-            this.questionDescription = "For the given statememt, \nPlease choose the subtopic it belongs to ";
             return this;
 
         }

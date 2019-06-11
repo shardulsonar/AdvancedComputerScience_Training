@@ -48,21 +48,21 @@ namespace ACS_Training.Screens
         {
             if ((Option)lbx_options.SelectedItem == null)
             {
-                MessageBox.Show(Application.Current.MainWindow, "Please select an option", "Option not found", MessageBoxButton.OK,  MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.MainWindow, Properties.Resources.quizOptionErrorMessage, Properties.Resources.quizOptionError, MessageBoxButton.OK,  MessageBoxImage.Error);
             }
             else
             {
                 selectedOption = (Option)lbx_options.SelectedItem;
                 if (selectedOption.status)
                 {
-                    tbx_optionStatus.Text = "Correct";
+                    tbx_optionStatus.Text = Properties.Resources.quizCorrect;
                     tbx_optionStatus.Foreground = new SolidColorBrush(Colors.Green);
                 }
                 else
                 {
-                    tbx_optionStatus.Text = "Incorrect";
+                    tbx_optionStatus.Text = Properties.Resources.quizIncorrect;
                     tbx_optionStatus.Foreground = new SolidColorBrush(Colors.Red);
-                    tbx_correctAnswer.Text = "Correct answer is : " + question.correctAnswer;
+                    tbx_correctAnswer.Text = Properties.Resources.quizCorrectAnswerText + question.correctAnswer;
                 }
                 btn_check.IsEnabled = false;
             }

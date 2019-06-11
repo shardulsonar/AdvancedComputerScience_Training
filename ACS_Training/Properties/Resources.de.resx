@@ -118,40 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="applicationTitle" xml:space="preserve">
-    <value>Advanced Computer Science Training</value>
+    <value>Fortgeschrittene Informatik-Ausbildung</value>
   </data>
   <data name="fileName" xml:space="preserve">
-    <value>content.json</value>
+    <value>content.de.json</value>
   </data>
   <data name="flowDirection" xml:space="preserve">
     <value>LeftToRight</value>
   </data>
   <data name="questionDescription" xml:space="preserve">
-    <value>For the given statement, please choose the subtopic it belongs to</value>
+    <value>Wählen Sie für die angegebene Anweisung das Unterthema aus, zu dem sie gehört</value>
   </data>
   <data name="quizCheckButton" xml:space="preserve">
-    <value>Check</value>
+    <value>Prüfen</value>
   </data>
   <data name="quizCorrect" xml:space="preserve">
-    <value>Correct</value>
+    <value>Richtig</value>
   </data>
   <data name="quizCorrectAnswerText" xml:space="preserve">
-    <value>Correct answer is : </value>
+    <value>Die richtige Antwort lautet : </value>
   </data>
   <data name="quizHeading" xml:space="preserve">
-    <value>Quiz Topic :</value>
+    <value>Quiz Thema :</value>
   </data>
   <data name="quizIncorrect" xml:space="preserve">
-    <value>Incorrect</value>
+    <value>Falsch</value>
   </data>
   <data name="quizNextButton" xml:space="preserve">
-    <value>Next</value>
+    <value>Nächster</value>
   </data>
   <data name="quizOptionError" xml:space="preserve">
-    <value>Option not found</value>
+    <value>Option nicht gefunden</value>
   </data>
   <data name="quizOptionErrorMessage" xml:space="preserve">
-    <value>Please select an option</value>
+    <value>Bitte wählen Sie eine Option</value>
   </data>
   <data name="quizTitle" xml:space="preserve">
     <value>Quiz</value>

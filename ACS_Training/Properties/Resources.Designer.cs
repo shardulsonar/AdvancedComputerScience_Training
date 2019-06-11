@@ -22,7 +22,7 @@ namespace ACS_Training.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ACS_Training.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ACS_Training.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ACS_Training.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,16 @@ namespace ACS_Training.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Advanced Computer Science Training.
         /// </summary>
-        internal static string applicationTitle {
+        public static string applicationTitle {
             get {
                 return ResourceManager.GetString("applicationTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to content_en.json.
+        ///   Looks up a localized string similar to content.json.
         /// </summary>
-        internal static string fileName {
+        public static string fileName {
             get {
                 return ResourceManager.GetString("fileName", resourceCulture);
             }
@@ -81,27 +81,99 @@ namespace ACS_Training.Properties {
         /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
-        internal static string flowDirection {
+        public static string flowDirection {
             get {
                 return ResourceManager.GetString("flowDirection", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to For the given statememt, \nPlease choose the subtopic it belongs to.
+        ///   Looks up a localized string similar to For the given statement, please choose the subtopic it belongs to.
         /// </summary>
-        internal static string questionDescription {
+        public static string questionDescription {
             get {
                 return ResourceManager.GetString("questionDescription", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check.
+        /// </summary>
+        public static string quizCheckButton {
+            get {
+                return ResourceManager.GetString("quizCheckButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct.
+        /// </summary>
+        public static string quizCorrect {
+            get {
+                return ResourceManager.GetString("quizCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct answer is : .
+        /// </summary>
+        public static string quizCorrectAnswerText {
+            get {
+                return ResourceManager.GetString("quizCorrectAnswerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quiz Topic :.
         /// </summary>
-        internal static string quizWindowTitle {
+        public static string quizHeading {
             get {
-                return ResourceManager.GetString("quizWindowTitle", resourceCulture);
+                return ResourceManager.GetString("quizHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect.
+        /// </summary>
+        public static string quizIncorrect {
+            get {
+                return ResourceManager.GetString("quizIncorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string quizNextButton {
+            get {
+                return ResourceManager.GetString("quizNextButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option not found.
+        /// </summary>
+        public static string quizOptionError {
+            get {
+                return ResourceManager.GetString("quizOptionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select an option.
+        /// </summary>
+        public static string quizOptionErrorMessage {
+            get {
+                return ResourceManager.GetString("quizOptionErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quiz.
+        /// </summary>
+        public static string quizTitle {
+            get {
+                return ResourceManager.GetString("quizTitle", resourceCulture);
             }
         }
     }

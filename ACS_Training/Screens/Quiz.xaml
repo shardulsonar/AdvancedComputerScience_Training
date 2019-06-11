@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACS_Training.Screens"
+        xmlns:resX ="clr-namespace:ACS_Training.Properties"
         mc:Ignorable="d"
-        Title="Quiz" Height="500" Width="400"
+        Title="{x:Static resX:Resources.quizTitle}" Height="500" Width="400"
         Loaded="Quiz_Window_Loaded"
         WindowStartupLocation="CenterScreen"
         Closing="Quiz_Window_Closing"
@@ -16,11 +17,11 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel x:Name="stk_title" Margin="0,0,0,0" Orientation="Horizontal" Grid.Row="0">
-            <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Quiz Topic : " VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text = "{x:Static resX:Resources.quizHeading}" VerticalAlignment="Top" FontSize="16"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel x:Name="stk_question" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,0">
-            <TextBlock TextWrapping="Wrap" Text="{Binding questionDescription}" Margin="30,20,50,0" FontSize="14"/>
+            <TextBlock TextWrapping="Wrap" Text="{x:Static resX:Resources.questionDescription}" Margin="30,20,50,0" FontSize="14"/>
             <TextBlock TextWrapping="Wrap" Text="{Binding questionText}" FontSize="16" Margin="30,20,30,0" FontWeight="Bold"/>
             <ListBox x:Name="lbx_options" Margin="30,20,30,0" ItemsSource="{Binding options}">
                 <ListBox.ItemTemplate>
@@ -33,8 +34,8 @@
             <TextBlock x:Name="tbx_correctAnswer" TextWrapping="Wrap" FontSize="12" Margin="30,10,30,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" FlowDirection="RightToLeft" Margin="0,0,30,10">
-            <Button Content="Next" Margin="0,0,10,0" Width="45" Click="Next_Button_Click"/>
-            <Button x:Name="btn_check" Content="Check"  Margin="0,0,10,0" Width="45" Click="Check_Button_Click"/>
+            <Button Content="{x:Static resX:Resources.quizNextButton}" Margin="0,0,10,0" Width="45" Click="Next_Button_Click"/>
+            <Button x:Name="btn_check" Content="{x:Static resX:Resources.quizCheckButton}"  Margin="0,0,10,0" Width="45" Click="Check_Button_Click"/>
         </StackPanel>
 
     </Grid>

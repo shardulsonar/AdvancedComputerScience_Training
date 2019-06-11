@@ -118,42 +118,42 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="applicationTitle" xml:space="preserve">
-    <value>Advanced Computer Science Training</value>
+    <value>प्रगत संगणक विज्ञान प्रशिक्षण</value>
   </data>
   <data name="fileName" xml:space="preserve">
-    <value>content.json</value>
+    <value>content.mr.json</value>
   </data>
   <data name="flowDirection" xml:space="preserve">
     <value>LeftToRight</value>
   </data>
   <data name="questionDescription" xml:space="preserve">
-    <value>For the given statement, please choose the subtopic it belongs to</value>
+    <value>दिलेल्या विधानासाठी, कृपया ते संबंधित उप-विषयक निवडा</value>
   </data>
   <data name="quizCheckButton" xml:space="preserve">
-    <value>Check</value>
+    <value>तपासा</value>
   </data>
   <data name="quizCorrect" xml:space="preserve">
-    <value>Correct</value>
+    <value>बरोबर</value>
   </data>
   <data name="quizCorrectAnswerText" xml:space="preserve">
-    <value>Correct answer is : </value>
+    <value>बरोबर उत्तर आहे : </value>
   </data>
   <data name="quizHeading" xml:space="preserve">
-    <value>Quiz Topic :</value>
+    <value>प्रश्नमंजुषा विषय :</value>
   </data>
   <data name="quizIncorrect" xml:space="preserve">
-    <value>Incorrect</value>
+    <value>चुक</value>
   </data>
   <data name="quizNextButton" xml:space="preserve">
-    <value>Next</value>
+    <value>पुढे</value>
   </data>
   <data name="quizOptionError" xml:space="preserve">
-    <value>Option not found</value>
+    <value>पर्याय सापडला नाही</value>
   </data>
   <data name="quizOptionErrorMessage" xml:space="preserve">
-    <value>Please select an option</value>
+    <value>कृपया एक पर्याय निवडा</value>
   </data>
   <data name="quizTitle" xml:space="preserve">
-    <value>Quiz</value>
+    <value>प्रश्नमंजुषा</value>
   </data>
 </root>
