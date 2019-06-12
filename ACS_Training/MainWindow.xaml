@@ -42,7 +42,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="{x:Static resX:Resources.applicationTitle}" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20" FontWeight="DemiBold"/>
+        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20" FontWeight="DemiBold" TextWrapping="Wrap"/>
 
         <Grid Grid.Row="2">
 
