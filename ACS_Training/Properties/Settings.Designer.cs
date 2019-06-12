@@ -34,5 +34,17 @@ namespace ACS_Training.Properties {
                 this["language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0")]
+        public string selectedSubTopic {
+            get {
+                return ((string)(this["selectedSubTopic"]));
+            }
+            set {
+                this["selectedSubTopic"] = value;
+            }
+        }
     }
 }

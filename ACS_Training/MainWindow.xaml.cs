@@ -63,8 +63,21 @@ namespace ACS_Training
             cbx_language.SelectedItem = defaultCulture;
             topics = Storage.ReadJson<List<Topic>>(Properties.Resources.fileName);
             lbx_topics.ItemsSource = topics;
-            lbx_topics.SelectedItem = topics.FirstOrDefault<Topic>();
+            string selectedSubTopic = Properties.Settings.Default.selectedSubTopic;
+            int indexOfSubtopic = Convert.ToInt16(selectedSubTopic.Substring(2, 1));
+            int indexOfTopic = Convert.ToInt16(selectedSubTopic.Substring(0, 1));
+            try
+            {
+                lbx_topics.SelectedItem = topics[indexOfTopic];
+                lbx_subTopics.SelectedItem = topics[indexOfTopic].subTopics[indexOfSubtopic];
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                lbx_topics.SelectedItem = topics.FirstOrDefault<Topic>();
+                lbx_subTopics.SelectedItem = ((Topic)(lbx_topics.SelectedItem)).subTopics.FirstOrDefault<SubTopic>();
+            }
             
+
         }
 
         private void Lbx_topics_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,6 +100,15 @@ namespace ACS_Training
             var text = (sender as ComboBox).SelectedItem.ToString();
             language = text.Substring(0, 2);
             Properties.Settings.Default.language = language;
+            Properties.Settings.Default.Save();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int indexOfTopic = lbx_topics.SelectedIndex;
+            int indexOfSubtopic = lbx_subTopics.SelectedIndex;
+
+            Properties.Settings.Default.selectedSubTopic = indexOfTopic + "." + indexOfSubtopic;
             Properties.Settings.Default.Save();
         }
     }

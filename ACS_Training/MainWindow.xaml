@@ -8,10 +8,11 @@
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
-        Title="{x:Static resX:Resources.applicationTitle}" Height="500" Width="850">
+        Title="{x:Static resX:Resources.applicationTitle}" Height="500" Width="850"
+        Closing="Window_Closing">
 
     <Window.Resources>
-        <local:StringToImageSourceConverter x:Key="StringToImage" />
+        <local:StringToImageConverter x:Key="StringToImage" />
         <Storyboard x:Key="MenuLoaded">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="menuGrid">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="80"/>
@@ -42,7 +43,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="0" Text="{x:Static resX:Resources.applicationTitle}" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20" FontWeight="DemiBold" TextWrapping="Wrap"/>
+        <TextBlock HorizontalAlignment="Left" Width="200" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="1" Text="{Binding name}" FontSize="20" FontWeight="DemiBold" />
 
         <Grid Grid.Row="2">
 

@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 
 namespace ACS_Training.Classes
 {
-    class StringToImageSourceConverter : IValueConverter
+    class StringToImageConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -17,8 +17,6 @@ namespace ACS_Training.Classes
                 return (object)null;
             if (value is string)
                 return (object)new BitmapImage(new Uri((string)value, UriKind.RelativeOrAbsolute));
-            if (value is Uri)
-                return (object)new BitmapImage((Uri)value);
             return (object)null;
         }
 
