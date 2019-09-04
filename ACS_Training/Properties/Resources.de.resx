@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,43 +117,649 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="portal.title" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="account.data.title" xml:space="preserve">
+    <value>egfwef</value>
+  </data>
+  <data name="portal.solution.version" xml:space="preserve">
+    <value>wefwefwe</value>
+  </data>
+  <data name="menu.item.home" xml:space="preserve">
+    <value>wegfwefe</value>
+    <comment>================================================================================
+Menu items
+================================================================================</comment>
+  </data>
+  <data name="menu.item.changePassword" xml:space="preserve">
+    <value>wefwefwefwef</value>
+  </data>
+  <data name="menu.item.deleteAccount" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.create_account" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Progress Bar
+================================================================================</comment>
+  </data>
+  <data name="widget.onboarding.step.title.set_password" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.2fa_assignment" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.identification" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.practitioner_data" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.practice_assignment" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.step" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.steps.of" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="common.button.submit" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+General labels
+================================================================================</comment>
+  </data>
+  <data name="onboarding.steps.warn.order" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="onboarding.steps.warn.completed" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="pam.btn.cancel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="pam.btn.selection.change" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Registration
+================================================================================</comment>
+  </data>
+  <data name="register.email.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.passwordConfirm.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.terms.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.license.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.license.accept.button" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.license.link" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.license.text_following" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.dataprivacy.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.dataprivacy.link" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.dataprivacy.text_following" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.next" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.start" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.confirm.code.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.email.missing" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.registration.error" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.registration.token" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.registration.code.invalid" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.register.password.noMatch" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.register.license.unaccepted" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.register.dataprivacy.unaccepted" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.register.successConfirm.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.register.successConfirm" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.progress.step.account" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.verify.email" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Email Address Verification
+================================================================================</comment>
+  </data>
+  <data name="register.verify.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.email.verify.success.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.email.verify.success.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password.text" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Set password
+================================================================================</comment>
+  </data>
+  <data name="register.password.success.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password.success" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.resend.code" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password.verify.success.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.password.verify.success.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.progress.step.password" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.second.factor.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Set second factor
+================================================================================</comment>
+  </data>
+  <data name="register.second.factor.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.second.factor.success.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.second.factor.success.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Identification
+================================================================================</comment>
+  </data>
+  <data name="register.identify.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.incomplete.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.success.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.success.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.error.redirect.url" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.btn.postident" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.identify.btn.incomplete.postident" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Add additional data
+================================================================================</comment>
+  </data>
+  <data name="register.additional.information.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.given.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.family.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.title.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.specialty.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.lanr.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.label.gender" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.label.female" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.label.male" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.additional.information.label.gender.no" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.practitioner.add" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.practitioner.find" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.practitioner.add.duplicate.lanr" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Select organization
+================================================================================</comment>
+  </data>
+  <data name="register.organization.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.confirm.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.text.not.found" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.btn.search" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.organization.name.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.city.zip.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.street.number.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.organization.number.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.no.results" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.btn.search" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.btn.select" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.btn.back" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.config" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.organization.search" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.organization.add" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.practitioner.role.add" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.warn.more.practices.available" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.search.hint" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.organization.search.one.or.more" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.btn.new" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Enter new organization
+================================================================================</comment>
+  </data>
+  <data name="register.organization.new.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.organization.name.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.street.number.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.supplement.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.zip.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.city.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.country.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.phone.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.fax.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.specialties.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.organization.number.label" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.btn.create" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.btn.back" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.found.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.found.btn.select" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.found.btn.create" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="register.organization.new.bsnr.hint" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.organization.add.duplicate.bsnr" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.resetVerify.failure" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Password Reset Verification
+================================================================================</comment>
+  </data>
+  <data name="change.password.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Change password
+================================================================================</comment>
+  </data>
+  <data name="change.password.currentPassword" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="change.password.newPassword" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="change.password.confirmPassword" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="change.password.currentPassword.required" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="change.password.newPassword.required" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.password.was.changed" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.change.password.backend.error" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.current.password.not.valid" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.delete.account.successConfirm" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Delete Account
+================================================================================</comment>
+  </data>
+  <data name="message.error.deleteAccount.failure" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.backend.error" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Error messages
+================================================================================</comment>
+  </data>
+  <data name="message.error.reset.failure" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="cc.help_and_support.text.preffix" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Info page
+================================================================================</comment>
+  </data>
+  <data name="cc.help_and_support.text.link" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="cc.help_and_support.text.suffix" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Registration Widget
+================================================================================</comment>
+  </data>
+  <data name="widget.registration.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.steps.completed.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.completed.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.completed.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.onboarded.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.registration.btn.provider.portal.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.title.registration_complete" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.hibernated.info" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.step.interrupted.info" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.poll.error.detail" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.poll.error.summary" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.onboarding.btn.next" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.practice.assignment.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+PracticeUi Assignment Widget
+================================================================================</comment>
+  </data>
+  <data name="widget.practice.assignment.no.practices" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.practice.assignment.btn.assign" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="confirm.practice.assignment.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="confirm.practice.assignment.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="confirm.practice.assignment.btn.confirm" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="confirm.practice.assignment.label.pin" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="practice.assignment.btn.confirm" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Confirm or reject PracticeAssignment
+================================================================================</comment>
+  </data>
+  <data name="practice.assignment.btn.reject" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="practice.assignment.btn.load" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.confirm.practice.success" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.reject.practice.success" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="widget.practitioner.data.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Practitioner Data Widget
+================================================================================</comment>
+  </data>
+  <data name="gender.female" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="gender.male" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="lock.second.factor.title" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Lock second factor
+================================================================================</comment>
+  </data>
+  <data name="lock.second.factor.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="lock.second.factor.btn" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="menu.item.lock.second.factor" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.error.lock.second.factor" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="message.info.lock.second.factor.success" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="page.login.sign.in.button" xml:space="preserve">
+    <value></value>
+    <comment>================================================================================
+Login page
+================================================================================</comment>
+  </data>
+  <data name="page.login.register.link" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="page.login.register.text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="page.login.sign.in.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="page.login.title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="page.login.srHeader" xml:space="preserve">
+    <value></value>
+  </data>
   <data name="applicationTitle" xml:space="preserve">
-    <value>Fortgeschrittene Informatik-Ausbildung</value>
+    <value></value>
   </data>
   <data name="fileName" xml:space="preserve">
-    <value>content.de.json</value>
+    <value></value>
   </data>
   <data name="flowDirection" xml:space="preserve">
-    <value>LeftToRight</value>
+    <value></value>
   </data>
   <data name="questionDescription" xml:space="preserve">
-    <value>Wählen Sie für die angegebene Anweisung das Unterthema aus, zu dem sie gehört</value>
+    <value></value>
   </data>
   <data name="quizCheckButton" xml:space="preserve">
-    <value>Prüfen</value>
+    <value></value>
   </data>
   <data name="quizCorrect" xml:space="preserve">
-    <value>Richtig</value>
+    <value></value>
   </data>
   <data name="quizCorrectAnswerText" xml:space="preserve">
-    <value>Die richtige Antwort lautet : </value>
+    <value></value>
   </data>
   <data name="quizHeading" xml:space="preserve">
-    <value>Quiz Thema :</value>
+    <value></value>
   </data>
   <data name="quizIncorrect" xml:space="preserve">
-    <value>Falsch</value>
+    <value></value>
   </data>
   <data name="quizNextButton" xml:space="preserve">
-    <value>Nächster</value>
+    <value></value>
   </data>
   <data name="quizOptionError" xml:space="preserve">
-    <value>Option nicht gefunden</value>
+    <value></value>
   </data>
   <data name="quizOptionErrorMessage" xml:space="preserve">
-    <value>Bitte wählen Sie eine Option</value>
+    <value></value>
   </data>
   <data name="quizTitle" xml:space="preserve">
-    <value>Quiz</value>
+    <value></value>
   </data>
 </root>
